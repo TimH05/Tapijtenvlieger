@@ -1,8 +1,5 @@
 const discord = require("discord.js");
 const botConfig = require("./botconfig.js");
-
-client.db = require("quick.db");
-client.request = new (require("rss-parser"))();
  
 const client = new discord.Client();
 client.login(process.env.token);
