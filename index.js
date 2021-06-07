@@ -24,6 +24,6 @@ client.on("message", async message =>{
     var command = messageArray[0];
 
     if(command === `${prefix}hallo`){
-        return message.channel.send("Hallo!");
+        return message.channel.send("@everyone");
     }
 });
