@@ -1,17 +1,13 @@
-const discord = require("discord.js");
-const botConfig = require("./botconfig.js");
- 
-const client = new discord.Client();
-client.login(process.env.token);
- 
-client.on("ready", async () => {
- 
-    console.log(`${client.user.username} is online.`);
-    client.user.setActivity("Tim", { type: "PLAYING" });
- 
-});
+const Discord = require("discord.js");
+const client = new Discord.Client();
+client.db = require("quick.db");
+client.request = new (require("rss-parser"))();
+client.config = require("./config.js");
 
-handleUploads();
+client.on("ready", () => {
+    console.log("I'm ready!");
+    handleUploads();
+});
 
 function handleUploads() {
     if (client.db.fetch(`postedVideos`) === null) client.db.set(`postedVideos`, []);
@@ -34,6 +30,7 @@ function handleUploads() {
         });
     }, client.config.watchInterval);
 }
+
 
 client.on("message", async message =>{
 
