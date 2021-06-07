@@ -29,3 +29,20 @@ client.on("message", async message =>{
         return message.channel.send("Hallo!");
     }
 });
+
+client.on("message", async message =>{
+
+    if(message.author.bot) return;
+
+    if(message.channel.type == "dm") return;
+
+    var prefix = botConfig.prefix;
+
+    var messageArray = message.content.split(" ");
+
+    var command = messageArray[0];
+
+    if(command === `${prefix}youtube`){
+        return message.channel.send("HEY @everyone !!! Tapijtenvlieger heeft een nieuwe video geupload! https://www.youtube.com/");
+    }
+});
