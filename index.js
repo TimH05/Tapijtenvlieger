@@ -46,7 +46,7 @@ client.on("message", async message =>{
     var command = messageArray[0];
 
     if(command === `${prefix}online?`){
-        message.delete
+        message.delete()
         return message.channel.send("Ik ben online!");
     }
 });
