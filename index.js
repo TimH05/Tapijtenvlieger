@@ -45,8 +45,8 @@ client.on("message", async message =>{
 
     var command = messageArray[0];
 
-    if(command === `${prefix}hallo`){
-        return message.channel.send("Hallo!");
+    if(command === `${prefix}online?`){
+        return message.channel.send("Ik ben online!");
     }
 });
 
