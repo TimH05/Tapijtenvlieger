@@ -64,6 +64,7 @@ client.on("message", async message =>{
     var command = messageArray[0];
 
     if(command === `${prefix}youtube`){
+        message.delete()
         return message.channel.send("@everyone - TapijtenVlieger heeft een nieuwe video geupload! Check hem snel op zijn kanaal! https://www.youtube.com/channel/UC-bTYzNFaCGdlxVVhJiIPCg");
     }
 });
@@ -81,6 +82,7 @@ client.on("message", async message =>{
     var command = messageArray[0];
 
     if(command === `${prefix}twitch`){
+        message.delete()
         return message.channel.send("@everyone - TapijtenVlieger is live op Twitch! Ga snel kijken!! https://www.twitch.tv/tapijtenvlieger");
     }
 });
