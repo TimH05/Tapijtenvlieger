@@ -88,7 +88,7 @@ client.on("message", async message =>{
     }
 });
 
-Client.on('message', message => {
+client.on("message", async message => {
 
 
     if(!message.content.startsWitch(prefix) || message.author.bot) return;
