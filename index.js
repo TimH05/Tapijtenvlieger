@@ -96,7 +96,7 @@ client.on('message', async message => {
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
-    if(command === `regels`){
+    if(command === `command`){
 
         client.commands.get('command').execute(message, args, Discord);
     }
