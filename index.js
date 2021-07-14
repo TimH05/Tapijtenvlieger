@@ -98,6 +98,6 @@ client.on('message', async message => {
 
     if(command === `command`){
 
-        client.commands.get('command').execute(message, args, Discord);
+        client.command.get('command').execute(message, args, Discord);
     }
 });
