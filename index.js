@@ -1,4 +1,5 @@
 const discord = require("discord.js");
+const { prefix } = require("./config.js");
 const botConfig = require("./config.js");
  
 const client = new discord.Client();
@@ -84,5 +85,19 @@ client.on("message", async message =>{
     if(command === `${prefix}twitch`){
         message.delete()
         return message.channel.send("@everyone - TapijtenVlieger is live op Twitch! Ga snel kijken!! https://www.twitch.tv/tapijtenvlieger");
+    }
+});
+
+Client.on('message', message => {
+
+
+    if(!message.content.startsWitch(prefix) || message.author.bot) return;
+
+    const args = message.content.slice(prefix.length).split(/ +/);
+    const command = args.shift().toLowerCase();
+
+    if(command === `${prefix}regels`){
+
+        Client.commands.get('command').execute(message, args, Discord);
     }
 });
