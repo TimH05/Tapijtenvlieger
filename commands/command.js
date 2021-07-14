@@ -10,5 +10,7 @@ module.exports = {
         .addFields(
             {name: 'regel 1', value: 'Niet schelden.'}
         )
+
+        message.channel.send(newEmbed)
     }
 }

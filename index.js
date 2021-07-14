@@ -88,7 +88,7 @@ client.on("message", async message =>{
     }
 });
 
-client.on("message", async message => {
+client.on('message', async message => {
 
 
     if(!message.content.startsWith(prefix) || message.author.bot) return;
@@ -96,7 +96,7 @@ client.on("message", async message => {
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
-    if(command === `${prefix}regels`){
+    if(command === `regels`){
 
         Client.commands.get('command').execute(message, args, Discord);
     }
