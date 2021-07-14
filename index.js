@@ -98,6 +98,6 @@ client.on('message', async message => {
 
     if(command === `regels`){
 
-        Client.commands.get('command').execute(message, args, Discord);
+        client.commands.get('command').execute(message, args, Discord);
     }
 });
